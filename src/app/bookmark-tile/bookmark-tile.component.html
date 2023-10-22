@@ -1,0 +1,18 @@
+<div class="bookmark-tile">
+    <div class="tile-icon" *ngIf="!faviconError">
+        <img [src]="tileIconSrc" alt="" (error)="faviconError=true">
+    </div>
+
+    <div class="tile-icon fallback" *ngIf="faviconError">
+        {{ bookmark.name.toUpperCase()[0] }}
+    </div>
+    
+    <p class="tile-text">{{ bookmark.name }}</p>
+
+    <div class="bookmark-tile-actions" (click)="$event.stopPropagation()">
+        <div class="btn bookmark-tile-action-btn" style="font-size: 8px;" (click)="onDeleteClick()">
+            <i class="material-icons">delete</i>
+        </div>
+    </div>
+
+</div>

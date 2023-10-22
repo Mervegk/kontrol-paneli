@@ -1,0 +1,28 @@
+<div class="app-wrapper">
+
+  <img [src]="bg"  class="bg-img" (load)="onBGImageLoad()">
+
+  <div class="btn change-bg-btn" (click)="changeBGImage()" *ngIf="!loadingBGImage">
+    <i class="material-icons">refresh</i>
+  </div>
+
+  <div class="top-section">
+    <!-- <h1>19.00</h1> -->
+    <h1>{{ dateTime | async | date: 'HH:MM' }}</h1>
+    <!-- <h2>7 Eylül 2021</h2> -->
+    <h2>{{ dateTime | async | date: 'd MMM y' }}</h2>
+
+  </div>
+
+  <div class="content-section" [@routeAnim]="prepareRoute(outlet)" style="overflow: hidden;">
+    <router-outlet #outlet="outlet"></router-outlet>
+
+    
+  </div>
+
+  <div class="bottom-section">
+<app-tabs></app-tabs>
+ 
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="todos-wrapper">
+
+  <div class="container">
+
+    <app-todo-item
+      @todoItemAnim 
+      *ngFor="let todo of todos" 
+      [todo]="todo" 
+      (click)="toggleCompleted(todo)"
+      (editClick)="onEditClick(todo)"
+      (deleteClick)="onDeleteClick(todo)">
+    </app-todo-item>
+
+    <div class="btn-container btn-centered">
+      <a routerLink="add" class="btn ekle-btn">
+        <i class="material-icons-outlined" style="font-size: 20px;">add</i>
+        Ekle</a>
+    </div>
+
+
+    <!-- <div class="todo-item">
+      <div class="check-box">
+        <i class="material-icons-outlined">check</i>
+      </div>
+      <p class="todo-text">bugün fıstıkçı şahap değil jöleci yavuz alsa olur mu?</p>
+
+    </div> -->
+  </div>
+
+</div>

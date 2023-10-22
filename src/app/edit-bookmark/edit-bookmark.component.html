@@ -1,0 +1,23 @@
+<div class="edit-bookmark-wrapper">
+    <h2 class="is-bold">Yer İşareti Adı</h2>
+    <form #myForm="ngForm" ngNativeValidate (ngSubmit)="onFsubmit(myForm)"  >
+        <div class="form-field">
+            <label class="form-label">Ad</label>
+            <input class="textbox" ngModel #textField name="name" type="text" placeholder="Ad giriniz..." >
+            
+        </div>
+
+        <div class="form-field">
+            <label class="form-label">URL</label>
+            <input class="textbox" ngModel #textField name="url" type="url" placeholder="Örn. https://ornek.com" required>
+            
+        </div>
+
+        <div class="btn-container">
+            <a routerLink="../" class="btn">Vazgeç</a>
+            <button class="btn align-end">Kaydet</button>
+        </div>
+    </form>
+
+
+</div>

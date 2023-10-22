@@ -1,0 +1,55 @@
+
+ <div class="edit-note-wrapper container has-blurred-white-bg">
+    <h2 class="is-bold">Notu Düzenle</h2>
+
+    <form >
+        <div class="form-field">
+            <input class="textbox" ngModel #titleField="ngModel"  name="title" type="text" placeholder="Başlık giriniz..." required minlength="2">
+            <ng-container *ngIf="titleField.invalid">
+                <p >Lütfen not başlığı giriniz. Başlık en az iki karakterden oluşmalıdır.</p>
+            </ng-container>
+        </div>
+
+        <div class="form-field">
+            <textarea class="textarea" ngModel name="content" placeholder="Not giriniz..."></textarea>
+        </div>
+
+        <div class="btn-container">
+            <a routerLink="../" class="btn">Vazgeç</a>
+            <button type="button" class="btn"  >Sil</button>
+            <button class="btn align-end">Kaydet</button>
+        </div>
+
+    </form>
+</div> 
+ <!-- <div class="edit-note-wrapper container has-blurred-white-bg">
+    <h2 class="is-bold">Notu Düzenle</h2>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        
+        <div class="form-field">
+            <input class="textbox" ngModel #titleField="ngModel" name="title" type="text" placeholder="Başlık giriniz..." required minlength="2">
+            <ng-container *ngIf="titleField.invalid">
+                <p ng-if="titleField.errors.required">Lütfen not başlığı giriniz. Başlık en az iki karakterden oluşmalıdır.</p>
+                
+            </ng-container>
+            
+        </div>
+
+        <div class="form-field">
+            <textarea class="textarea"  ngModel name="content" placeholder="Not giriniz..."></textarea>
+        </div>
+        
+        
+        <div class="btn-container"> -->
+
+            <!-- <a href="/notes" class="btn" >Vazgeç</a> -->
+         <!--  <a routerLink="../" class="btn" >Vazgeç</a>
+
+            <button class="btn align-end">Kaydet</button>
+
+        </div>
+        
+    </form>
+
+</div> -->

@@ -1,0 +1,18 @@
+<div class="add-todo-wrapper container has-blurred-white-bg">
+    <h2 class="is-bold">Yeni Yapılacaklar Maddesi</h2>
+
+    <form #myform="ngForm" (ngSubmit)="onFormSubmit(myform)">
+        <div class="form-field">
+            <input class="textbox" ngModel #textField name="text" type="text" placeholder="Yeni madde giriniz..." required minlength="3">
+            <!-- <ng-container *ngIf="textField.invalid">
+                <p ng-if="textField.errors.required">Lütfen metin giriniz. Metin en az üç karakterden oluşmalıdır.</p>
+            </ng-container> -->
+        </div>
+
+        <div class="btn-container">
+            <a routerLink="../" class="btn">Vazgeç</a>
+            <button class="btn align-end">Oluştur</button>
+        </div>
+    </form>
+
+</div>
